@@ -1,7 +1,14 @@
 import React from "react";
+import MarketingApp from "./components/MarketingApp";
 
 const App = () => {
-  return <h1>Container here</h1>;
+  return (
+    <div>
+      <h1>Container here</h1>
+      <hr />
+      <MarketingApp />
+    </div>
+  );
 };
 
 export default App;
