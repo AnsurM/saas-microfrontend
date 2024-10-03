@@ -5,3 +5,5 @@ ignore all node_modules
 **/build
 
 **/.env
+**/.DS_Store
+.DS_Store
