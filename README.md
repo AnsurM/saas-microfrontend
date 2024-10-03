@@ -4,6 +4,12 @@
 
 This repo aims to build knowledge and skill on how to create microfrontends using JavaScript frameworks, and integrate them together.
 
+### Learning Outcomes:
+
+1. Learn how to build microfrontends using JS frameworks and integrate them together
+2. Learn how to deploy microfrontends independently to a container in Amazon S3 (AWS) and host them on a domain in Amazon CloudFront
+3. Learn how to use GitHub Actions to build and deploy the microfrontends
+
 ### Requirements:
 
 The following listed requirements heavily influenced the techniques used in the architectural decisions of the application.
@@ -16,10 +22,14 @@ The following listed requirements heavily influenced the techniques used in the 
 
 ### Technologies used:
 
-1. React
-2. Vue
-3. Webpack
-4. Module Federation
+1. Microfrontends
+2. React
+3. Vue
+4. Webpack
+5. Module Federation
+6. Amazon S3
+7. Amazon CloudFront
+8. GitHub Actions (CI/CD)
 
 ### Microfrontend Structure
 
