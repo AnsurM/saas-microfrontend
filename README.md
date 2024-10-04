@@ -1,43 +1,64 @@
-# SaaS Microfrontend
+# SaaS Microfrontend Project
 
-### Aim:
+## Overview
 
-This repo aims to build knowledge and skill on how to create microfrontends using JavaScript frameworks, and integrate them together.
+This project demonstrates the implementation of a microfrontend architecture using JavaScript frameworks. It showcases how to build, integrate, and deploy multiple independent frontend applications as part of a larger, cohesive system.
 
-### Learning Outcomes:
+## Key Features / Technologies
 
-1. Learn how to build microfrontends using JS frameworks and integrate them together
-2. Learn how to deploy microfrontends independently to a container in Amazon S3 (AWS) and host them on a domain in Amazon CloudFront
-3. Learn how to use GitHub Actions to build and deploy the microfrontends
+- Microfrontend architecture with React and Vue
+- Webpack Module Federation for runtime integration
+- Independent deployment of microfrontends
+- AWS-based hosting and distribution (S3 and CloudFront)
+- Automated CI/CD pipeline using GitHub Actions
 
-### Requirements:
+## Project Structure
 
-The following listed requirements heavily influenced the techniques used in the architectural decisions of the application.
+The project consists of four microfrontends, each located in the `apps` folder:
 
-1. Zero coupling between child apps
-2. Near-Zero coupling between container and child apps
-3. Scoped CSS: CSS from one project should not affect CSS from another project
-4. Version Control (Monorepo vs separate) shouldn't have any impact on the overall project.
-5. Container app should be free to decide whether to use the most up-to-date or a specific version of each microfrontend.
+1. **Container** (React): The main application shell
+2. **Marketing** (React): Handles marketing-related features
+3. **Authentication** (React): Manages user authentication
+4. **Dashboard** (Vue): Provides user dashboard functionality
 
-### Technologies used:
+## Architecture Principles
 
-1. Microfrontends
-2. React
-3. Vue
-4. Webpack
-5. Module Federation
-6. Amazon S3
-7. Amazon CloudFront
-8. GitHub Actions (CI/CD)
+1. Zero coupling between child applications
+2. Near-zero coupling between container and child applications
+3. Scoped CSS to prevent style conflicts
+4. Version control agnostic (works with monorepo or separate repos)
+5. Flexible versioning of microfrontends in the container app
 
-### Microfrontend Structure
+## Getting Started
 
-Each microfrontend is a self-contained application that is built and run independently. They are all located in the `apps` folder.
+1. Clone the repository
+2. Navigate to each app in the `apps` folder and run `npm install`
+3. Start the development servers for each app using `npm run start`
 
-The microfrontends are:
+For detailed instructions, refer to the documentation in each microfrontend's directory.
 
-1. Container: React Microfrontend
-2. Marketing: React Microfrontend
-3. Authentication: React Microfrontend
-4. Dashboard: Vue Microfrontend
+## Deployment
+
+The project is set up for deployment to AWS:
+
+1. Microfrontends are built and uploaded to Amazon S3
+2. Amazon CloudFront is used for content distribution
+3. GitHub Actions automate the build and deployment process
+
+Refer to the `.github/workflows` directory for CI/CD configuration details.
+
+## Learning Outcomes
+
+This project serves as a practical example for:
+
+1. Building and integrating microfrontends using JavaScript frameworks
+2. Implementing independent deployment of microfrontends to AWS
+3. Setting up an automated CI/CD pipeline with GitHub Actions
+
+## Contributing
+
+Contributions are welcome! Please read the contributing guidelines before submitting pull requests.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
