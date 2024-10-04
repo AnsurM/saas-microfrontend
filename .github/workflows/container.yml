@@ -1,16 +1,15 @@
 name: deploy-container
 
 on:
-  # test deploy workflow
   push:
     branches:
       - main
     paths:
-      - "packages/container/**"
+      - "apps/container/**"
 
 defaults:
   run:
-    working-directory: packages/container
+    working-directory: apps/container
 
 jobs:
   build:
