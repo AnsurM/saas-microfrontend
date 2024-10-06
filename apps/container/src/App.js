@@ -16,9 +16,12 @@ const generateClassName = createGenerateClassName({ productionPrefix: "co" });
 const history = createBrowserHistory();
 
 const App = () => {
-  const [isSignedIn, setIsSignedIn] = useState(false);
+  const [isSignedIn, setIsSignedIn] = useState(
+    localStorage.getItem("isSignedIn") === "true"
+  );
 
   useEffect(() => {
+    localStorage.setItem("isSignedIn", isSignedIn + "");
     if (isSignedIn && history.location.pathname !== "/dashboard") {
       history.push("/dashboard");
     }
