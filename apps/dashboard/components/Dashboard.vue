@@ -109,9 +109,9 @@
       </Panel>
     </div>
 
-    <div class="col-12 md:col-6 lg:col-4 p-fluid contact-form">
+    <div class="col-12 md:col-6 lg:col-4 fluid contact-form">
       <Panel header="Contact Us">
-        <div class="p-grid">
+        <div class="grid">
           <div class="col-12">
             <Dropdown
               v-model="dropdownCity"
@@ -140,25 +140,25 @@
       <Panel header="Contacts">
         <ul>
           <li>
-            <button class="p-link">
+            <button class="link">
               <span class="name">Claire Williams</span>
               <span class="email">clare@primevue.com</span>
             </button>
           </li>
           <li>
-            <button class="p-link">
+            <button class="link">
               <span class="name">Jason Dourne</span>
               <span class="email">jason@primevue.com</span>
             </button>
           </li>
           <li>
-            <button class="p-link">
+            <button class="link">
               <span class="name">Jane Davidson</span>
               <span class="email">jane@primevue.com</span>
             </button>
           </li>
           <li>
-            <button class="p-link">
+            <button class="link">
               <span class="name">Tony Corleone</span>
               <span class="email">tony@primevue.com</span>
             </button>
@@ -170,12 +170,12 @@
     <div class="col-12 lg:col-4">
       <Panel header="Activity" style="height: 100%">
         <div class="activity-header">
-          <div class="p-grid">
-            <div class="p-col-6">
+          <div class="grid">
+            <div class="col-6">
               <span style="font-weight: bold">Last Activity</span>
               <p>Updated 1 minute ago</p>
             </div>
-            <div class="p-col-6" style="text-align: right">
+            <div class="col-6" style="text-align: right">
               <Button label="Refresh" icon="pi pi-refresh" />
             </div>
           </div>
@@ -183,15 +183,15 @@
 
         <ul class="activity-list">
           <li>
-            <div class="p-d-flex p-jc-between p-ai-center p-mb-3">
-              <h5 class="activity p-m-0">Income</h5>
+            <div class="d-flex jc-between ai-center mb-3">
+              <h5 class="activity m-0">Income</h5>
               <div class="count">$900</div>
             </div>
             <ProgressBar :value="95" :showValue="false" />
           </li>
           <li>
-            <div class="p-d-flex p-jc-between p-ai-center p-mb-3">
-              <h5 class="activity p-m-0">Tax</h5>
+            <div class="d-flex jc-between ai-center mb-3">
+              <h5 class="activity m-0">Tax</h5>
               <div class="count" style="background-color: #f9c851">$250</div>
             </div>
             <ProgressBar :value="24" :showValue="false" />
@@ -200,12 +200,12 @@
       </Panel>
     </div>
 
-    <div class="col-12 p-lg-6">
+    <div class="col-12 lg-6">
       <div class="card">
         <h1 style="font-size: 16px">Recent Sales</h1>
         <DataTable
           :value="products"
-          class="p-datatable-customers"
+          class="datatable-customers"
           :rows="5"
           style="margin-bottom: 20px"
           :paginator="true"
@@ -233,19 +233,19 @@
               <Button
                 icon="pi pi-search"
                 type="button"
-                class="p-button-success p-mr-2 p-mb-1"
+                class="button-success mr-2 mb-1"
               ></Button>
               <Button
                 icon="pi pi-times"
                 type="button"
-                class="p-button-danger p-mb-1"
+                class="button-danger mb-1"
               ></Button>
             </template>
           </Column>
         </DataTable>
       </div>
     </div>
-    <div class="col-12 p-lg-6">
+    <div class="col-12 lg-6">
       <div class="card">
         <Chart type="line" :data="lineData" />
       </div>
@@ -346,14 +346,14 @@ export default {
 
 <style lang="scss" scoped>
 @media screen and (max-width: 960px) {
-  ::v-deep(.p-datatable) {
-    &.p-datatable-customers {
-      .p-datatable-thead > tr > th,
-      .p-datatable-tfoot > tr > td {
+  ::v-deep(.datatable) {
+    &.datatable-customers {
+      .datatable-thead > tr > th,
+      .datatable-tfoot > tr > td {
         display: none !important;
       }
 
-      .p-datatable-tbody > tr {
+      .datatable-tbody > tr {
         border-bottom: 1px solid #dee2e6;
         > td {
           text-align: left;
@@ -366,7 +366,7 @@ export default {
           clear: left;
           border: 0 none;
 
-          .p-column-title {
+          .column-title {
             padding: 0.4rem;
             min-width: 30%;
             display: inline-block;
@@ -374,7 +374,7 @@ export default {
             font-weight: bold;
           }
 
-          .p-progressbar {
+          .progressbar {
             margin-top: 0.5rem;
           }
         }
@@ -652,7 +652,7 @@ $footerBgColor: #ffffff;
       @include clearfix();
     }
 
-    .p-checkbox {
+    .checkbox {
       vertical-align: middle;
       margin-right: 0.5em;
     }
@@ -667,13 +667,13 @@ $footerBgColor: #ffffff;
       color: $textSecondaryColor;
     }
 
-    .p-panel-content {
+    .panel-content {
       min-height: 256px;
     }
   }
 
   .contact-form {
-    .p-panel-content {
+    .panel-content {
       min-height: 256px;
     }
   }
@@ -724,7 +724,7 @@ $footerBgColor: #ffffff;
       }
     }
 
-    .p-panel-content {
+    .panel-content {
       min-height: 256px;
     }
   }
