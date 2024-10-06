@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import { Switch, Route, Router } from "react-router-dom";
 import { StylesProvider, createGenerateClassName } from "@material-ui/core";
 
 import Landing from "./components/Landing";
