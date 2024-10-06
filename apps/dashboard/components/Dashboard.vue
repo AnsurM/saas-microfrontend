@@ -1,28 +1,29 @@
 <template>
-  <div class="p-grid p-fluid dashboard">
-    <div class="p-col-12 p-lg-4">
+  <div class="grid fluid dashboard">
+    <div class="col-12 md:col-6 lg:col-4">
       <div class="card summary">
         <span class="title">Users</span>
         <span class="detail">Number of visitors</span>
         <span class="count visitors">12</span>
       </div>
     </div>
-    <div class="p-col-12 p-lg-4">
+    <div class="col-12 md:col-6 lg:col-4">
       <div class="card summary">
         <span class="title">Sales</span>
         <span class="detail">Number of purchases</span>
         <span class="count purchases">534</span>
       </div>
     </div>
-    <div class="p-col-12 p-lg-4">
+    <div class="col-12 md:col-6 lg:col-4">
       <div class="card summary">
         <span class="title">Revenue</span>
         <span class="detail">Income for today</span>
         <span class="count revenue">$3,200</span>
       </div>
     </div>
+    <div class="hidden md:block lg:hidden col-6"></div>
 
-    <div class="p-col-12 p-md-6 p-xl-3">
+    <div class="col-12 md:col-6 xl:col-3">
       <div class="highlight-box">
         <div class="initials" style="background-color: #007be5; color: #00448f">
           <span>TV</span>
@@ -34,7 +35,7 @@
         </div>
       </div>
     </div>
-    <div class="p-col-12 p-md-6 p-xl-3">
+    <div class="col-12 md:col-6 xl:col-3">
       <div class="highlight-box">
         <div class="initials" style="background-color: #ef6262; color: #a83d3b">
           <span>TI</span>
@@ -46,7 +47,7 @@
         </div>
       </div>
     </div>
-    <div class="p-col-12 p-md-6 p-xl-3">
+    <div class="col-12 md:col-6 xl:col-3">
       <div class="highlight-box">
         <div class="initials" style="background-color: #20d077; color: #038d4a">
           <span>OI</span>
@@ -58,7 +59,7 @@
         </div>
       </div>
     </div>
-    <div class="p-col-12 p-md-6 p-xl-3">
+    <div class="col-12 md:col-6 xl:col-3">
       <div class="highlight-box">
         <div class="initials" style="background-color: #f9c851; color: #b58c2b">
           <span>CI</span>
@@ -71,7 +72,7 @@
       </div>
     </div>
 
-    <div class="p-col-12 p-md-6 p-lg-4">
+    <div class="col-12 md:col-6 lg:col-4">
       <Panel header="Tasks" style="height: 100%">
         <ul class="task-list">
           <li>
@@ -108,10 +109,10 @@
       </Panel>
     </div>
 
-    <div class="p-col-12 p-md-6 p-lg-4 p-fluid contact-form">
+    <div class="col-12 md:col-6 lg:col-4 p-fluid contact-form">
       <Panel header="Contact Us">
         <div class="p-grid">
-          <div class="p-col-12">
+          <div class="col-12">
             <Dropdown
               v-model="dropdownCity"
               :options="dropdownCities"
@@ -119,23 +120,23 @@
               placeholder="Select a City"
             />
           </div>
-          <div class="p-col-12">
+          <div class="col-12">
             <InputText type="text" placeholder="Name" />
           </div>
-          <div class="p-col-12">
+          <div class="col-12">
             <InputText type="text" placeholder="Age" />
           </div>
-          <div class="p-col-12">
+          <div class="col-12">
             <InputText type="text" placeholder="Message" />
           </div>
-          <div class="p-col-12">
+          <div class="col-12">
             <Button type="button" label="Send" icon="pi pi-envelope" />
           </div>
         </div>
       </Panel>
     </div>
 
-    <!-- <div class="p-col-12 p-lg-4 contacts">
+    <!-- <div class="col-12 lg:col-4 contacts">
       <Panel header="Contacts">
         <ul>
           <li>
@@ -166,7 +167,7 @@
       </Panel>
     </div> -->
 
-    <div class="p-col-12 p-lg-4">
+    <div class="col-12 lg:col-4">
       <Panel header="Activity" style="height: 100%">
         <div class="activity-header">
           <div class="p-grid">
@@ -199,7 +200,7 @@
       </Panel>
     </div>
 
-    <div class="p-col-12 p-lg-6">
+    <div class="col-12 p-lg-6">
       <div class="card">
         <h1 style="font-size: 16px">Recent Sales</h1>
         <DataTable
@@ -244,7 +245,7 @@
         </DataTable>
       </div>
     </div>
-    <div class="p-col-12 p-lg-6">
+    <div class="col-12 p-lg-6">
       <div class="card">
         <Chart type="line" :data="lineData" />
       </div>
