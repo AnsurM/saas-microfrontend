@@ -52,8 +52,9 @@ Refer to the `.github/workflows` directory for CI/CD configuration details.
 This project serves as a practical example for:
 
 1. Building and integrating microfrontends using JavaScript frameworks
-2. Implementing independent deployment of microfrontends to AWS
-3. Setting up an automated CI/CD pipeline with GitHub Actions
+2. Configuring navigation for microfrontends both in isolation and integration.
+3. Implementing independent deployment of microfrontends to AWS
+4. Setting up an automated CI/CD pipeline with GitHub Actions
 
 ## Contributing
 
